@@ -69,4 +69,4 @@ if __name__ == '__main__':
                 category_index,
                 use_normalized_coordinates=True,
                 line_thickness=8)
-            plt.imsave(os.path.join(FLAGS.output_dir, 'output.png'), image_np)
+plt.imsave(os.path.join(FLAGS.output_dir, 'output.png'), image_np)
