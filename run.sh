@@ -13,13 +13,12 @@ output_dir=/output  # 训练目录
 dataset_dir=/data/weixin-42421001/ssd # 数据集目录，这里是写死的，记得修改
 
 train_dir=$output_dir/train
-checkpoint_dir=$dataset_dir  # change $train_dir into $dataset_dir
+checkpoint_dir=$train_dir 
 eval_dir=$output_dir/eval
 
 # config文件
 config=ssd_mobilenet_v1_pets.config
-pipeline_config_path=$dataset_dir/$config  # change $output_dir into $dataset_dir
-
+pipeline_config_path=$output_dir/$config  
 # 先清空输出目录，本地运行会有效果，tinymind上运行这一行没有任何效果
 # This is redundant on tinymind.
 #rm -rvf $output_dir/*   
